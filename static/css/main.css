@@ -1,0 +1,10 @@
+.sekil {
+    border: 3px solid darkgrey;
+    border-radius: 15px;
+    padding: 20px;
+    margin-left: auto;
+    height: 300px;
+}
+.icerik ul li{
+   list-style: none;
+}

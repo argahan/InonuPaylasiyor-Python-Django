@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="container">
+<table width="1141" height="350"  class="table-responsive">
+
+<td width="675" valign="top">
+
+
+
+<div role="tabpanel" class="col-lg-12">
+  <!-- Nav sekmeleri -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#ssoru" aria-controls="ssoru" role="tab" data-toggle="tab">Vize-Final</a></li>
+    <li role="presentation"><a href="#dnot" aria-controls="dnot" role="tab" data-toggle="tab">Ders Notları</a></li>
+    <li role="presentation"><a href="#dvideo" aria-controls="dvideo" role="tab" data-toggle="tab">Ders Videoları</a></li>
+    <li role="presentation"><a href="#duyuru" aria-controls="duyuru" role="tab" data-toggle="tab">Duyurular</a></li>
+  </ul>
+  <!-- Sekme çerçeveleri -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="ssoru">
+        {% for icerik in p %}
+        {% if icerik.icerik.icerik == 'Vize Final' %}
+           <ul>
+               <li>
+                   <a href="../detail/{{ icerik.pk }}">{{ icerik.baslik }} / {{ icerik.bolum }}</a>
+               </li>
+           </ul>
+             {% endif %}
+
+        {% endfor %}
+
+
+    </div>
+    <div role="tabpanel" class="tab-pane" id="dnot">
+        {% for icerik in p %}
+        {% if icerik.icerik.icerik == 'Ders Notları' %}
+           <ul>
+               <li>
+                 <a href="../detail/{{ icerik.pk }}">{{ icerik.baslik }} / {{ icerik.bolum }}</a>
+               </li>
+           </ul>
+             {% endif %}
+
+        {% endfor %}
+
+    </div>
+    <div role="tabpanel" class="tab-pane" id="dvideo">
+        {% for icerik in p %}
+        {% if icerik.icerik.icerik == 'Ders Videoları' %}
+           <ul>
+               <li>
+                 <a href="../detail/{{ icerik.pk }}">{{ icerik.baslik }} / {{ icerik.bolum }}</a>
+               </li>
+           </ul>
+             {% endif %}
+
+        {% endfor %}
+
+    </div>
+    <div role="tabpanel" class="tab-pane" id="duyuru">
+
+        {% for icerik in p %}
+        {% if icerik.icerik.icerik == 'Duyuru' %}
+           <ul>
+               <li>
+                 <a href="../detail/{{ icerik.pk }}">{{ icerik.baslik }} / {{ icerik.bolum }}</a>
+               </li>
+           </ul>
+             {% endif %}
+
+        {% endfor %}
+
+
+    </div>
+
+
+  </div>
+</div>
+
+</td>
+</table>
+</div>
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+{% endblock %}
+
+
+
+

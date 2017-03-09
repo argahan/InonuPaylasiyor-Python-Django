@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style type="text/css">
+#sel1{
+position:relative;
+left:130px;
+}
+#sel2{
+    width:200px;
+}
+</style>
+
+<div class="form-group" id="sel1">
+  <div class="form-group">
+
+    <form action="" method="post">{% csrf_token %}
+
+    {{form2.as_p}}
+    <div class="col-sm-4">
+    </div>
+  </div>
+
+
+
+  </select>
+</div>
+
+
+
+  <p>&nbsp; </p><p>&nbsp; </p>
+  <p>&nbsp; </p>
+  <p>&nbsp; </p>
+  <p>&nbsp; </p>
+  <p>&nbsp; </p>
+  <p>&nbsp; </p>
+
+{% endblock %}
+
+
+

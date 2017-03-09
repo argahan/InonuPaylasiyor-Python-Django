@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style type="text/css">
+#mesaj{
+position:relative;
+left:500px;}
+</style>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr >
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Email</th>
+        <th>Telefon</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="success">
+        <td>Halil</td>
+        <td>ARSLAN</td>
+        <td>h.arslan@example.com</td>
+        <td>0000 000 00 00</td>
+      </tr>
+      <tr class="danger">
+        <td>Zekeriya</td>
+        <td>BIYIKLI</td>
+        <td>z.biyikli@example.com</td>
+        <td>0000 000 00 00</td>
+      </tr>
+      <tr class="info">
+        <td>Osama</td>
+        <td>TABİB</td>
+        <td>o.tabib@example.com</td>
+        <td>0000 000 00 00</td>
+      </tr>
+    </tbody>
+  </table>
+        <button type="Mesaj" id="mesaj" ><a href="mailto:z.biyikli@hotmail.com">Mesaj At</a></button>
+</div>
+
+<p>&nbsp;</p>
+
+{% endblock %}
+
+
+
+

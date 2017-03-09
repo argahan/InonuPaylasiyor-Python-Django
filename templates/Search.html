@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form class="navbar-form navbar-center"  action="" method="GET">
+   <div class="form-group">
+      <input type="text" name="Search" placeholder="Search posts"/>
+</div>
+      <input type="submit" value="Search"/>
+      </form>
+    {% for icerik in objects_list %}
+        <div class="row">
+             <div class="col-sm-12">
+                 <div class="thumbnail">
+                    <div class="caption" >
+                        <ul>
+                            <li>
+                                <a href="../detail/{{ icerik.pk }}">{{ icerik.baslik }} / {{ icerik.bolum }}</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                 </div>
+
+            </div>
+
+        </div>
+    {% endfor %}
+{% endblock %}

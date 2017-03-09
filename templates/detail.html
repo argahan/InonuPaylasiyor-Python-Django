@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+    <div class="row" align="left" >
+       <div class="col-xs-5 col-md-3 align-left icerik">
+       {% for x in p %}
+           <h2>{{ x.baslik }} / {{ x.bolum }} </h2>
+            <ul>
+                <li><h3>{{ x.icerik }}</h3></li>
+                <li><h3>{{ x.ad_soyad }}</h3></li>
+                <li><h3>{{ x.aciklama }}</h3></li>
+            </ul>
+
+    {% endfor %}
+  </div>
+    </div>
+    </div>
+
+{% endblock %}
+
+
